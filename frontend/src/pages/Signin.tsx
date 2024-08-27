@@ -27,22 +27,23 @@ export const Signin = () => {
     }
 
     return <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col justify-center text-center bg-gradient-to-br from-white to-slate-200 h-screen animate-slideIn lg:animate-none">
-            <AuthHeader heading="Login" phrase="Don't have an account?" linkName="signup" link="/signup"></AuthHeader>
-            <InputBox label="Username" placeholder="Enter your email" onChange={(e)=>{
-                setPostInputs(c => ({
-                    ...c,
-                    username: e.target.value
-                }))
-            }}></InputBox>
-            <InputBox label="Password" placeholder="Enter your password" type="password" onChange={(e)=>{
-                setPostInputs(c=>({
-                    ...c,
-                    password:e.target.value
-                }))
-            }}></InputBox>
-            <AuthButton onClick={sendRequest} label="Signin"></AuthButton>
-
+        <div className="flex flex-col justify-center text-center bg-gradient-to-br from-cyan-300 to-sky-700 h-screen animate-slideIn lg:animate-none">
+            <div className="shadow-black  shadow-lg rounded-xl p-10 py-20 max-w-md mx-auto bg-gradient-to-br from-sky-100 to-cyan-100">
+                <AuthHeader heading="Login" phrase="Don't have an account?" linkName="signup" link="/signup"></AuthHeader>
+                <InputBox label="Username" placeholder="Enter your email" onChange={(e)=>{
+                    setPostInputs(c => ({
+                        ...c,
+                        username: e.target.value
+                    }))
+                }}></InputBox>
+                <InputBox label="Password" placeholder="Enter your password" type="password" onChange={(e)=>{
+                    setPostInputs(c=>({
+                        ...c,
+                        password:e.target.value
+                    }))
+                }}></InputBox>
+                <AuthButton onClick={sendRequest} label="Signin"></AuthButton>
+            </div>
         </div>
         <div className="hidden lg:block animate-fadeIn">
             <Quote></Quote>

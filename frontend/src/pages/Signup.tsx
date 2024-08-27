@@ -28,28 +28,29 @@ export const Signup = () => {
     }
 
     return <div className="grid grid-cols-1 lg:grid-cols-2">
-        <div className="flex flex-col justify-center text-center bg-gradient-to-br from-white to-slate-200 h-screen animate-slideIn lg:animate-none">
-            <AuthHeader heading="Create an account" phrase="Already have an account?" linkName="login" link="/signin"></AuthHeader>
-            <InputBox label="Name" placeholder="Enter your name" onChange={(e)=>{
-                setPostInputs(c => ({
-                    ...c,
-                    name:e.target.value
-                }))
-            }}></InputBox>
-            <InputBox label="Username" placeholder="Enter your email" onChange={(e)=>{
-                setPostInputs(c => ({
-                    ...c,
-                    username: e.target.value
-                }))
-            }}></InputBox>
-            <InputBox label="Password" placeholder="Enter your password" type="password" onChange={(e)=>{
-                setPostInputs(c=>({
-                    ...c,
-                    password:e.target.value
-                }))
-            }}></InputBox>
-            <AuthButton onClick={sendRequest} label="Signup"></AuthButton>
-
+        <div className="flex flex-col justify-center text-center bg-gradient-to-br from-cyan-300 to-sky-700 h-screen animate-slideIn lg:animate-none">
+            <div className="shadow-black  shadow-lg rounded-xl p-10 py-20 max-w-md mx-auto bg-gradient-to-br from-sky-100 to-cyan-100">
+                <AuthHeader heading="Create an account" phrase="Already have an account?" linkName="login" link="/signin"></AuthHeader>
+                <InputBox label="Name" placeholder="Enter your name" onChange={(e)=>{
+                    setPostInputs(c => ({
+                        ...c,
+                        name:e.target.value
+                    }))
+                }}></InputBox>
+                <InputBox label="Username" placeholder="Enter your email" onChange={(e)=>{
+                    setPostInputs(c => ({
+                        ...c,
+                        username: e.target.value
+                    }))
+                }}></InputBox>
+                <InputBox label="Password" placeholder="Enter your password" type="password" onChange={(e)=>{
+                    setPostInputs(c=>({
+                        ...c,
+                        password:e.target.value
+                    }))
+                }}></InputBox>
+                <AuthButton onClick={sendRequest} label="Signup"></AuthButton>
+            </div>
         </div>
         <div className="hidden lg:block lg:animate-fadeIn">
             <Quote></Quote>
