@@ -1,0 +1,12 @@
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Image is touching the text */
+    }
+    50% {
+        transform: translateY(-100px); /* Image moves up by 100px */
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
